@@ -21,6 +21,6 @@ func _physics_process(delta):
 		if body.get_name() == "Paddle":
 			pass
   
-if position.y > get_viewport_rect().end.y:
-	emit_signal("lives")
-	queue_free()
+	if position.y > get_viewport_rect().end.y:
+		emit_signal("lives")
+		queue_free()
